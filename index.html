@@ -21,7 +21,6 @@
                     animation: {
                         'fade-in': 'fadeIn 0.5s ease-out',
                         'slide-up': 'slideUp 0.3s ease-out',
-                        'slide-down': 'slideDown 0.3s ease-out',
                     },
                     keyframes: {
                         fadeIn: {
@@ -30,10 +29,6 @@
                         },
                         slideUp: {
                             '0%': { transform: 'translateY(10px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        slideDown: {
-                            '0%': { transform: 'translateY(-10px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' },
                         }
                     }
@@ -93,121 +88,49 @@
         })();
     </script>
 
-    <!-- ========== NAVBAR FIXED ========== -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full bg-white z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-md">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                         <i class="fas fa-newspaper text-white text-xl"></i>
                     </div>
-                    <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight">
-                        News<span class="text-blue-600">Portal</span>
-                    </a>
+                    <a href="#" class="text-2xl font-bold text-gray-900">News<span class="text-blue-600">Portal</span></a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="nav-link group">
-                        <i class="fas fa-home mr-2 text-blue-500"></i>
-                        <span>Beranda</span>
-                        <div class="nav-underline"></div>
-                    </a>
-                    <a href="#berita" class="nav-link group">
-                        <i class="fas fa-newspaper mr-2 text-blue-500"></i>
-                        <span>Berita</span>
-                        <div class="nav-underline"></div>
-                    </a>
-                    <a href="#kategori" class="nav-link group">
-                        <i class="fas fa-tag mr-2 text-blue-500"></i>
-                        <span>Kategori</span>
-                        <div class="nav-underline"></div>
-                    </a>
-                    <a href="#trending" class="nav-link group">
-                        <i class="fas fa-fire mr-2 text-blue-500"></i>
-                        <span>Trending</span>
-                        <div class="nav-underline"></div>
-                    </a>
-                    <a href="#tentang" class="nav-link group">
-                        <i class="fas fa-info-circle mr-2 text-blue-500"></i>
-                        <span>Tentang</span>
-                        <div class="nav-underline"></div>
-                    </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Beranda</a>
+                    <a href="#berita" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Berita</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Teknologi</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Olahraga</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Hiburan</a>
                 </div>
                 
-                <!-- Right Side: Search & Mobile Menu -->
+                <!-- Mobile Menu Button -->
                 <div class="flex items-center space-x-4">
-                    <!-- Search Button (Desktop) -->
-                    <button id="search-btn" class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors duration-200">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    
-                    <!-- Search Bar (Mobile/Tablet) -->
-                    <div class="lg:hidden flex items-center">
-                        <div class="relative">
-                            <input type="text" placeholder="Cari berita..." 
-                                   class="search-input hidden w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                            <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+                    <button id="mobile-menu-button" class="md:hidden text-gray-700">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
             
-            <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-lg rounded-b-lg animate-slide-down">
-                <div class="py-4 px-4 space-y-1">
-                    <a href="#" class="mobile-nav-link group">
-                        <i class="fas fa-home w-6 text-center text-blue-500"></i>
-                        <span class="ml-3">Beranda</span>
-                        <i class="fas fa-chevron-right ml-auto text-gray-400 text-sm"></i>
-                    </a>
-                    <a href="#berita" class="mobile-nav-link group">
-                        <i class="fas fa-newspaper w-6 text-center text-blue-500"></i>
-                        <span class="ml-3">Berita Terbaru</span>
-                        <i class="fas fa-chevron-right ml-auto text-gray-400 text-sm"></i>
-                    </a>
-                    <a href="#kategori" class="mobile-nav-link group">
-                        <i class="fas fa-tag w-6 text-center text-blue-500"></i>
-                        <span class="ml-3">Kategori</span>
-                        <i class="fas fa-chevron-right ml-auto text-gray-400 text-sm"></i>
-                    </a>
-                    <a href="#trending" class="mobile-nav-link group">
-                        <i class="fas fa-fire w-6 text-center text-blue-500"></i>
-                        <span class="ml-3">Trending</span>
-                        <i class="fas fa-chevron-right ml-auto text-gray-400 text-sm"></i>
-                    </a>
-                    <a href="#tentang" class="mobile-nav-link group">
-                        <i class="fas fa-info-circle w-6 text-center text-blue-500"></i>
-                        <span class="ml-3">Tentang Kami</span>
-                        <i class="fas fa-chevron-right ml-auto text-gray-400 text-sm"></i>
-                    </a>
-                    <a href="#kontak" class="mobile-nav-link group">
-                        <i class="fas fa-envelope w-6 text-center text-blue-500"></i>
-                        <span class="ml-3">Kontak</span>
-                        <i class="fas fa-chevron-right ml-auto text-gray-400 text-sm"></i>
-                    </a>
-                    
-                    <!-- Mobile Search -->
-                    <div class="pt-4 border-t border-gray-100">
-                        <div class="relative">
-                            <input type="text" placeholder="Cari berita..." 
-                                   class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                            <i class="fas fa-search absolute left-3 top-3.5 text-gray-400"></i>
-                        </div>
-                    </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Beranda</a>
+                    <a href="#berita" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Berita</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Teknologi</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Olahraga</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Hiburan</a>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- ========== END NAVBAR ========== -->
 
-    <!-- Hero Section (Add padding-top for fixed navbar) -->
+    <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-gray-100">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
@@ -248,20 +171,19 @@
     <main class="container mx-auto px-4 py-8">
         <!-- Berita Terbaru Section -->
         <section id="berita" class="mb-16">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-10 gap-4">
+            <div class="flex justify-between items-center mb-10">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Berita Terbaru</h2>
                     <p class="text-gray-600 mt-2">Informasi terkini dari berbagai sumber terpercaya</p>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <span class="text-gray-500 hidden md:inline">Filter:</span>
-                    <select id="category-filter" class="bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-auto">
+                <div class="hidden md:flex items-center space-x-2">
+                    <span class="text-gray-500">Filter:</span>
+                    <select id="category-filter" class="bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="all">Semua Kategori</option>
                         <option value="Teknologi">Teknologi</option>
                         <option value="Olahraga">Olahraga</option>
                         <option value="Hiburan">Hiburan</option>
                         <option value="Ekonomi">Ekonomi</option>
-                        <option value="Kesehatan">Kesehatan</option>
                     </select>
                 </div>
             </div>
@@ -330,16 +252,16 @@
                         Portal berita terpercaya yang menyajikan informasi terkini dan akurat dari berbagai bidang.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="social-icon">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -349,10 +271,10 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Tautan Cepat</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="footer-link">Beranda</a></li>
-                        <li><a href="#berita" class="footer-link">Berita</a></li>
-                        <li><a href="#" class="footer-link">Tentang Kami</a></li>
-                        <li><a href="#" class="footer-link">Kontak</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#berita" class="text-gray-400 hover:text-white transition">Berita</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kontak</a></li>
                     </ul>
                 </div>
                 
@@ -360,10 +282,10 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Kategori</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="footer-link">Teknologi</a></li>
-                        <li><a href="#" class="footer-link">Olahraga</a></li>
-                        <li><a href="#" class="footer-link">Politik</a></li>
-                        <li><a href="#" class="footer-link">Hiburan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Teknologi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Olahraga</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politik</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hiburan</a></li>
                     </ul>
                 </div>
             </div>
@@ -380,118 +302,39 @@
     
     <!-- Website Script -->
     <script>
-        // ========== NAVBAR FUNCTIONALITY ==========
-        
         // Navbar scroll effect
-        let lastScroll = 0;
-        const navbar = document.getElementById('navbar');
-        
         window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-            
-            // Add shadow when scrolled
-            if (currentScroll > 20) {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
                 navbar.classList.add('shadow-lg', 'bg-white', 'bg-opacity-95', 'backdrop-blur-sm');
             } else {
                 navbar.classList.remove('shadow-lg', 'bg-opacity-95', 'backdrop-blur-sm');
             }
-            
-            // Hide/show navbar on scroll
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                // Scrolling down - hide navbar
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up - show navbar
-                navbar.style.transform = 'translateY(0)';
-            }
-            
-            lastScroll = currentScroll;
         });
         
         // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            const isHidden = mobileMenu.classList.contains('hidden');
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
             
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('animate-slide-down');
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-times');
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
-            }
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!mobileMenu.contains(event.target) && 
-                !mobileMenuBtn.contains(event.target) && 
-                !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
             }
         });
         
         // Close mobile menu on link click
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
             });
         });
-        
-        // Search toggle functionality
-        const searchBtn = document.getElementById('search-btn');
-        const searchInput = document.querySelector('.search-input');
-        
-        if (searchBtn) {
-            searchBtn.addEventListener('click', function() {
-                searchInput.classList.toggle('hidden');
-                if (!searchInput.classList.contains('hidden')) {
-                    searchInput.focus();
-                }
-            });
-        }
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                
-                if (href === '#') {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                    return;
-                }
-                
-                const targetElement = document.querySelector(href);
-                if (targetElement) {
-                    e.preventDefault();
-                    
-                    // Calculate offset for fixed navbar
-                    const navbarHeight = navbar.offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // ========== OTHER FUNCTIONALITY ==========
         
         // Category filter
         document.getElementById('category-filter').addEventListener('change', function() {
@@ -594,33 +437,6 @@
                 }
             });
         });
-        
-        // Active link highlighting
-        function highlightActiveLink() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-            
-            let currentSection = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                
-                if (window.scrollY >= sectionTop && 
-                    window.scrollY < sectionTop + sectionHeight) {
-                    currentSection = '#' + section.id;
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', highlightActiveLink);
     </script>
 </body>
 </html>

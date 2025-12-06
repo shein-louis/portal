@@ -1,36 +1,18 @@
-/* =====================================================
-   ========== NAVBAR (FIXED, SIMPLE, CLEAN) ==========
-   ===================================================== */
+/* ========== NAVBAR STYLES ========== */
 
+/* Navbar base */
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-
-    background-color: white;
-    border-bottom: 1px solid #e5e7eb;
-
-    padding: 0.75rem 1rem;
-    transition: none !important;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* body padding supaya konten tidak ketiban navbar */
-body {
-    padding-top: 72px; 
-}
-
-/* Navbar desktop links */
+/* Navbar links for desktop */
 .nav-link {
     position: relative;
     display: flex;
     align-items: center;
-
     color: #4b5563;
     font-weight: 500;
     padding: 0.5rem 0;
-
     transition: color 0.2s ease;
 }
 
@@ -43,15 +25,14 @@ body {
     font-weight: 600;
 }
 
-/* underline effect */
 .nav-underline {
     position: absolute;
-    bottom: -3px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
     background-color: #3b82f6;
-    transition: width 0.25s ease;
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover .nav-underline,
@@ -59,21 +40,20 @@ body {
     width: 100%;
 }
 
-/* Mobile nav links */
+/* Mobile menu links */
 .mobile-nav-link {
     display: flex;
     align-items: center;
     padding: 0.75rem 1rem;
-
     color: #4b5563;
     border-radius: 0.5rem;
-
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .mobile-nav-link:hover {
     background-color: #f3f4f6;
     color: #3b82f6;
+    transform: translateX(4px);
 }
 
 .mobile-nav-link.active {
@@ -85,28 +65,23 @@ body {
 /* Search input */
 .search-input {
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-input:focus {
-    box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* =====================================================
-   ========== FOOTER & ICONS ==========
-   ===================================================== */
-
+/* Social icons in footer */
 .social-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     background-color: #374151;
+    border-radius: 50%;
     color: white;
-
     transition: all 0.3s ease;
 }
 
@@ -114,10 +89,10 @@ body {
     transform: translateY(-2px);
 }
 
-.social-icon:nth-child(1):hover { background-color: #1877f2; }
-.social-icon:nth-child(2):hover { background-color: #1da1f2; }
-.social-icon:nth-child(3):hover { background-color: #ff0000; }
-.social-icon:nth-child(4):hover { background-color: #e4405f; }
+.social-icon:nth-child(1):hover { background-color: #1877f2; } /* Facebook */
+.social-icon:nth-child(2):hover { background-color: #1da1f2; } /* Twitter */
+.social-icon:nth-child(3):hover { background-color: #ff0000; } /* YouTube */
+.social-icon:nth-child(4):hover { background-color: #e4405f; } /* Instagram */
 
 /* Footer links */
 .footer-link {
@@ -130,26 +105,23 @@ body {
     padding-left: 4px;
 }
 
-/* =====================================================
-   ========== GENERAL UI / COMPONENTS ==========
-   ===================================================== */
+/* ========== GENERAL STYLES ========== */
 
+/* Smooth transitions */
 * {
-    transition: background-color 0.3s ease,
-                border-color 0.3s ease,
-                transform 0.3s ease,
-                opacity 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, 
+                transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Cards */
+/* News card hover effects */
 .news-card {
-    border: 1px solid #e5e7eb;
     transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border-color: #3b82f6;
 }
 
@@ -168,7 +140,6 @@ body {
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
-
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -180,7 +151,7 @@ body {
 .bg-category-health { background-color: #06b6d4; }
 .bg-category-education { background-color: #f59e0b; }
 
-/* Read more */
+/* Read more button */
 .read-more-btn {
     display: inline-flex;
     align-items: center;
@@ -200,7 +171,7 @@ body {
     transform: translateX(4px);
 }
 
-/* Clamping */
+/* Line clamping */
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -215,7 +186,7 @@ body {
     overflow: hidden;
 }
 
-/* Scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -233,7 +204,7 @@ body {
     background: #555;
 }
 
-/* Ads */
+/* Ad containers */
 #ad-1, #ad-2 {
     transition: all 0.5s ease;
 }
@@ -247,20 +218,14 @@ body {
     min-height: auto !important;
 }
 
-/* =====================================================
-   ========== MODAL ==========
-   ===================================================== */
-
+/* Modal styles */
 .modal-overlay {
     position: fixed;
     inset: 0;
-
-    background: rgba(0,0,0,0.5);
-
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-
     z-index: 1000;
     animation: fadeIn 0.3s ease;
 }
@@ -268,15 +233,13 @@ body {
 .modal-content {
     background: white;
     border-radius: 1rem;
-
     max-width: 90%;
     max-height: 90vh;
     overflow-y: auto;
-
     animation: slideUp 0.3s ease;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     #ad-1, #ad-2 {
         margin-left: -1rem;
@@ -285,20 +248,20 @@ body {
         border-left: none;
         border-right: none;
     }
-
+    
     .modal-content {
         max-width: 95%;
         margin: 1rem;
     }
-
+    
     .nav-link span {
         font-size: 0.875rem;
     }
 }
 
-/* Loading */
+/* Loading animation */
 @keyframes pulse {
-    0%,100% { opacity: 1; }
+    0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
 }
 
@@ -314,15 +277,24 @@ body {
 }
 
 @media (min-width: 768px) {
-    .news-image { height: 200px; }
+    .news-image {
+        height: 200px;
+    }
 }
 
 @media (min-width: 1024px) {
-    .news-image { height: 220px; }
+    .news-image {
+        height: 220px;
+    }
 }
 
-/* Animations */
-@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
-@keyframes slideDown { from { transform: translateY(0); opacity: 1; } to { transform: translateY(20px); opacity: 0; } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+/* Additional animations */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(20px); opacity: 0; }
+}
