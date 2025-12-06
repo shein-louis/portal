@@ -1,16 +1,116 @@
-/* Custom Styles for NewsPortal */
+/* ========== NAVBAR STYLES ========== */
+
+/* Navbar base */
+#navbar {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar links for desktop */
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #4b5563;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.nav-link.active {
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.nav-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover .nav-underline,
+.nav-link.active .nav-underline {
+    width: 100%;
+}
+
+/* Mobile menu links */
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #4b5563;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    background-color: #f3f4f6;
+    color: #3b82f6;
+    transform: translateX(4px);
+}
+
+.mobile-nav-link.active {
+    background-color: #eff6ff;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* Search input */
+.search-input {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Social icons in footer */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #374151;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.social-icon:nth-child(1):hover { background-color: #1877f2; } /* Facebook */
+.social-icon:nth-child(2):hover { background-color: #1da1f2; } /* Twitter */
+.social-icon:nth-child(3):hover { background-color: #ff0000; } /* YouTube */
+.social-icon:nth-child(4):hover { background-color: #e4405f; } /* Instagram */
+
+/* Footer links */
+.footer-link {
+    color: #9ca3af;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: white;
+    padding-left: 4px;
+}
+
+/* ========== GENERAL STYLES ========== */
 
 /* Smooth transitions */
 * {
     transition: background-color 0.3s ease, border-color 0.3s ease, 
                 transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Navbar styles */
-.navbar-scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* News card hover effects */
@@ -153,6 +253,10 @@
         max-width: 95%;
         margin: 1rem;
     }
+    
+    .nav-link span {
+        font-size: 0.875rem;
+    }
 }
 
 /* Loading animation */
@@ -184,24 +288,13 @@
     }
 }
 
-/* Button animations */
-.btn-hover-lift:hover {
-    transform: translateY(-2px);
+/* Additional animations */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
-/* Gradient text */
-.text-gradient {
-    background: linear-gradient(to right, #3b82f6, #1d4ed8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Shadow utilities */
-.shadow-soft {
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-}
-
-/* Border animations */
-.hover-border-blue:hover {
-    border-color: #3b82f6;
+@keyframes slideDown {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(20px); opacity: 0; }
 }
