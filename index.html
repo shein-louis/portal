@@ -1,282 +1,516 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-        
-        <meta name="monetag" content="b4c48ecf0794ac312070eb6ceb044ab0">
-    
-                <script src="https://quge5.com/88/tag.min.js?v=190749" data-zone="190749" data-cfasync="false"></script>
-    
-        
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsPortal - Berita Terkini & Terpercaya</title>
-    
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <link rel="stylesheet" href="style.css">
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-        <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+    <!-- ========== MONETAG VERIFICATION ========== -->
+    <!-- Script Monetag Baru - HARUS PERTAMA setelah <head> -->
+    <meta name="monetag" content="b4c48ecf0794ac312070eb6ceb044ab0">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsPortal - Berita Terkini & Terpercaya</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
 </head>
 
 <body class="bg-gray-50 font-sans text-gray-800">
-        <nav id="navbar" class="fixed w-full bg-white z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-newspaper text-white text-xl"></i>
-                    </div>
-                    <a href="#" class="text-2xl font-bold text-gray-900">News<span class="text-blue-600">Portal</span></a>
-                </div>
-                
-                                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Beranda</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Berita</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Teknologi</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Olahraga</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Hiburan</a>
-                </div>
-                
-                                <div class="flex items-center space-x-4">
-                    <button class="text-gray-700 hover:text-blue-600">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <button id="mobile-menu-button" class="md:hidden text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-            
-                        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
-                <div class="flex flex-col space-y-4">
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Beranda</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Berita</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Teknologi</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Olahraga</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Hiburan</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- ========== MONETAG SCRIPT ========== -->
+    <!-- Script Monetag ditempatkan di sini sesuai instruksi baru -->
+    <script>
+        (function(s){
+            console.log('🚀 Initializing Monetag...');
+            s.dataset.zone='10284809';
+            s.src='https://al5sm.com/tag.min.js?v=' + Date.now();
+            s.async = true;
+            s.defer = true;
+            s.setAttribute('data-cfasync', 'false');
+            
+            // Debug logging
+            s.onload = function() {
+                console.log('✅ Monetag script loaded successfully');
+                console.log('🔢 Zone ID: 10284809');
+                console.log('🌐 Domain:', window.location.hostname);
+                
+                // Check if monetag object is available
+                if (typeof monetag !== 'undefined') {
+                    console.log('💰 Monetag API is ready');
+                    
+                    // Track page view
+                    setTimeout(function() {
+                        if (typeof monetag.track === 'function') {
+                            monetag.track('page_view', {
+                                url: window.location.href,
+                                referrer: document.referrer
+                            });
+                        }
+                    }, 1000);
+                }
+            };
+            
+            s.onerror = function(error) {
+                console.error('❌ Failed to load Monetag script:', error);
+                console.log('🔄 Trying fallback method...');
+                
+                // Fallback method
+                var fallbackScript = document.createElement('script');
+                fallbackScript.src = 'https://al5sm.com/tag.min.js?fallback=' + Date.now();
+                fallbackScript.setAttribute('data-zone', '10284809');
+                fallbackScript.async = true;
+                fallbackScript.setAttribute('data-cfasync', 'false');
+                document.head.appendChild(fallbackScript);
+            };
+        })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+    </script>
+    <!-- ========== END MONETAG ========== -->
+    
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed w-full bg-white z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-xl"></i>
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-gray-900">News<span class="text-blue-600">Portal</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Beranda</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Berita</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Teknologi</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Olahraga</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition">Hiburan</a>
+                </div>
+                
+                <!-- Search & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Beranda</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Berita</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Teknologi</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Olahraga</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2">Hiburan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                    Berita <span class="text-blue-600">Terkini</span> & Terpercaya
-                </h1>
-                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Dapatkan informasi terbaru dan akurat dari berbagai bidang: teknologi, politik, olahraga, hiburan, dan banyak lagi. Selalu update dengan perkembangan terkini.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#berita-terbaru" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
-                        <i class="fas fa-newspaper mr-2"></i> Baca Berita
-                    </a>
-                    <a href="#" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300 border border-blue-600">
-                        <i class="fas fa-bell mr-2"></i> Berlangganan
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                    Berita <span class="text-blue-600">Terkini</span> & Terpercaya
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Dapatkan informasi terbaru dan akurat dari berbagai bidang: teknologi, politik, olahraga, hiburan, dan banyak lagi. Selalu update dengan perkembangan terkini.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#berita-terbaru" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-newspaper mr-2"></i> Baca Berita
+                    </a>
+                    <a href="#" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300 border border-blue-600">
+                        <i class="fas fa-bell mr-2"></i> Berlangganan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <div class="container mx-auto px-4 my-8">
-        <div class="text-center text-gray-500 text-sm mb-2">
-            <span class="bg-gray-100 px-3 py-1 rounded-full">Sponsored</span>
-        </div>
-        <div id="monetag-ad-1" class="min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center">
-            <div class="text-gray-400">
-                <i class="fas fa-ad text-lg mr-2"></i>
-                <span class="text-sm">Loading advertisement...</span>
-            </div>
-        </div>
-    </div>
+    <!-- Monetag Ad Placement 1 (Setelah Hero) -->
+    <div class="container mx-auto px-4 my-8">
+        <div class="text-center text-gray-500 text-sm mb-2">
+            <span class="bg-gray-100 px-3 py-1 rounded-full">
+                <i class="fas fa-ad mr-1"></i> Iklan
+            </span>
+        </div>
+        <div id="monetag-ad-1" class="ad-container min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-4">
+            <div class="text-gray-400 mb-2">
+                <i class="fas fa-spinner fa-spin text-lg mr-2"></i>
+            </div>
+            <span class="text-sm text-gray-500 text-center">Sedang memuat iklan...</span>
+            <span class="text-xs text-gray-400 mt-1">Powered by Monetag</span>
+        </div>
+    </div>
 
-        <main class="container mx-auto px-4 py-8">
-                <section id="berita-terbaru">
-            <div class="flex justify-between items-center mb-10">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Berita Terbaru</h2>
-                    <p class="text-gray-600 mt-2">Informasi terkini dari berbagai sumber terpercaya</p>
-                </div>
-                <div class="hidden md:flex items-center space-x-2">
-                    <span class="text-gray-500">Kategori:</span>
-                    <select class="bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="all">Semua</option>
-                        <option value="tech">Teknologi</option>
-                        <option value="sport">Olahraga</option>
-                        <option value="entertainment">Hiburan</option>
-                    </select>
-                </div>
-            </div>
-            
-                        <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="col-span-full text-center py-12">
-                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div>
-                    <p class="text-gray-600">Memuat berita...</p>
-                </div>
-            </div>
-            
-                        <div class="my-12">
-                <div class="text-center text-gray-500 text-sm mb-2">
-                    <span class="bg-gray-100 px-3 py-1 rounded-full">Advertisement</span>
-                </div>
-                <div id="monetag-ad-2" class="min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center">
-                    <div class="text-gray-400">
-                        <i class="fas fa-ad text-lg mr-2"></i>
-                        <span class="text-sm">Advertisement will appear here</span>
-                    </div>
-                </div>
-            </div>
-            
-                        <div class="text-center mt-12">
-                <button id="load-more" class="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition duration-300">
-                    <i class="fas fa-plus mr-2"></i> Muat Lebih Banyak
-                </button>
-            </div>
-        </section>
-        
-                <section class="mt-20 mb-16">
-            <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Tetap Terinformasi</h2>
-                <p class="mb-6 max-w-2xl mx-auto">Dapatkan berita terkini langsung ke email Anda. Berlangganan newsletter kami dan jangan lewatkan perkembangan terbaru.</p>
-                <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
-                    <input type="email" placeholder="Masukkan email Anda" class="flex-grow px-6 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
-                    <button type="submit" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300">
-                        Berlangganan
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Berita Terbaru Section -->
+        <section id="berita-terbaru">
+            <div class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Berita Terbaru</h2>
+                    <p class="text-gray-600 mt-2">Informasi terkini dari berbagai sumber terpercaya</p>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <span class="text-gray-500">Kategori:</span>
+                    <select class="bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="all">Semua</option>
+                        <option value="tech">Teknologi</option>
+                        <option value="sport">Olahraga</option>
+                        <option value="entertainment">Hiburan</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- News Cards Grid -->
+            <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News cards will be loaded here by news.js -->
+                <div class="col-span-full text-center py-12">
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div>
+                    <p class="text-gray-600">Memuat berita...</p>
+                </div>
+            </div>
+            
+            <!-- Monetag Ad Placement 2 (Di Tengah Konten) -->
+            <div class="my-12">
+                <div class="text-center text-gray-500 text-sm mb-2">
+                    <span class="bg-gray-100 px-3 py-1 rounded-full">
+                        <i class="fas fa-ad mr-1"></i> Sponsored
+                    </span>
+                </div>
+                <div id="monetag-ad-2" class="ad-container min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-4">
+                    <div class="text-gray-400 mb-2">
+                        <i class="fas fa-ad text-lg mr-2"></i>
+                    </div>
+                    <span class="text-sm text-gray-500 text-center">Area iklan akan muncul di sini</span>
+                    <span class="text-xs text-gray-400 mt-1">Monetag Zone: 10284809</span>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more" class="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Muat Lebih Banyak
+                </button>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="mt-20 mb-16">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Tetap Terinformasi</h2>
+                <p class="mb-6 max-w-2xl mx-auto">Dapatkan berita terkini langsung ke email Anda. Berlangganan newsletter kami dan jangan lewatkan perkembangan terbaru.</p>
+                <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4" id="newsletter-form">
+                    <input type="email" placeholder="Masukkan email Anda" required 
+                           class="flex-grow px-6 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300">
+                        Berlangganan
+                    </button>
+                </form>
+                <p class="text-blue-200 text-sm mt-4">Dapatkan update berita langsung di inbox Anda</p>
+            </div>
+        </section>
+    </main>
 
-        <div class="container mx-auto px-4 my-8">
-        <div class="text-center text-gray-500 text-sm mb-2">
-            <span class="bg-gray-100 px-3 py-1 rounded-full">Sponsored Content</span>
-        </div>
-        <div id="monetag-ad-3" class="min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center">
-            <div class="text-gray-400">
-                <i class="fas fa-ad text-lg mr-2"></i>
-                <span class="text-sm">Ad loading...</span>
-            </div>
-                    </div>
-    </div>
+    <!-- Monetag Ad Placement 3 (Sebelum Footer) -->
+    <div class="container mx-auto px-4 my-8">
+        <div class="text-center text-gray-500 text-sm mb-2">
+            <span class="bg-gray-100 px-3 py-1 rounded-full">
+                <i class="fas fa-ad mr-1"></i> Advertisement
+            </span>
+        </div>
+        <div id="monetag-ad-3" class="ad-container min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-4">
+            <div class="text-gray-400 mb-2">
+                <i class="fas fa-sync-alt fa-spin text-lg mr-2"></i>
+            </div>
+            <span class="text-sm text-gray-500 text-center">Memuat konten sponsor...</span>
+            <span class="text-xs text-gray-400 mt-1">Support our website</span>
+        </div>
+    </div>
 
-        <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-6">
-                        <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-newspaper text-white text-xl"></i>
-                        </div>
-                        <a href="#" class="text-2xl font-bold">News<span class="text-blue-400">Portal</span></a>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">
-                        Portal berita terpercaya yang menyajikan informasi terkini dan akurat dari berbagai bidang. Kami berkomitmen untuk menyajikan berita dengan integritas dan profesionalisme.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                                <div>
-                    <h3 class="text-xl font-bold mb-6">Tautan Cepat</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kontak</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kebijakan Privasi</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Syarat & Ketentuan</a></li>
-                    </ul>
-                </div>
-                
-                                <div>
-                    <h3 class="text-xl font-bold mb-6">Kategori</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Teknologi</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Olahraga</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politik</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hiburan</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kesehatan</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 NewsPortal. All rights reserved. Dibuat dengan <i class="fas fa-heart text-red-500 mx-1"></i> untuk pembaca Indonesia.</p>
-                <p class="text-sm mt-2">Didukung oleh <span class="text-blue-400">Monetag</span></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-newspaper text-white text-xl"></i>
+                        </div>
+                        <a href="#" class="text-2xl font-bold">News<span class="text-blue-400">Portal</span></a>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Portal berita terpercaya yang menyajikan informasi terkini dan akurat dari berbagai bidang. Kami berkomitmen untuk menyajikan berita dengan integritas dan profesionalisme.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Tautan Cepat</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Kategori</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Teknologi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Olahraga</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politik</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hiburan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kesehatan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 NewsPortal. All rights reserved. Dibuat dengan <i class="fas fa-heart text-red-500 mx-1"></i> untuk pembaca Indonesia.</p>
+                <p class="text-sm mt-2">
+                    Didukung oleh <span class="text-blue-400 font-medium">Monetag</span> | 
+                    Zone ID: <span class="font-mono bg-gray-800 px-2 py-1 rounded">10284809</span>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-        <script src="news.js"></script>
-    
-        <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('navbar-scrolled');
-                navbar.classList.add('shadow-lg');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-                navbar.classList.remove('shadow-lg');
-            }
-        });
-        
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-            
-            // Change icon
-            const icon = this.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
-                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
-                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
-            });
-        });
-        
-        // Load more button functionality
-        document.getElementById('load-more').addEventListener('click', function() {
-            this.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i> Memuat...';
-            this.disabled = true;
-            
-            // Simulate loading more content
-            setTimeout(() => {
-                this.innerHTML = '<i class="fas fa-check mr-2"></i> Semua Berita Dimuat';
-    140                this.classList.remove('bg-gray-200', 'hover:bg-gray-300');
-    141                this.classList.add('bg-green-100', 'text-green-800');
-    142            }, 1500);
-    143        });
-    144        
-    145        // Tambahkan skrip Monetag khusus jika diperlukan di sini (misalnya: monetag.showPopunder();)
-    146    </script>
+    <!-- JavaScript Files -->
+    <script src="news.js"></script>
+    
+    <!-- Monetag Verification Script -->
+    <script>
+        // Extended Monetag verification
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📰 NewsPortal Initialized');
+            console.log('🔍 Checking Monetag installation...');
+            
+            // Check Monetag after page load
+            setTimeout(function() {
+                // Method 1: Check global monetag object
+                if (typeof window.monetag !== 'undefined') {
+                    console.log('✅ Monetag global object detected');
+                    console.log('📊 Zone:', monetag.zone || '10284809');
+                    
+                    // Initialize Monetag ads in containers
+                    initMonetagAds();
+                } 
+                // Method 2: Check for Monetag script in DOM
+                else {
+                    var scripts = document.getElementsByTagName('script');
+                    var monetagFound = false;
+                    
+                    for (var i = 0; i < scripts.length; i++) {
+                        if (scripts[i].src && scripts[i].src.includes('al5sm.com')) {
+                            monetagFound = true;
+                            console.log('✅ Monetag script found in DOM');
+                            break;
+                        }
+                    }
+                    
+                    if (!monetagFound) {
+                        console.warn('⚠️ Monetag script not found, attempting manual injection');
+                        
+                        // Manual injection as last resort
+                        var manualScript = document.createElement('script');
+                        manualScript.innerHTML = `
+                            (function(s){
+                                s.dataset.zone='10284809';
+                                s.src='https://al5sm.com/tag.min.js?manual=' + Date.now();
+                                s.async = true;
+                                s.setAttribute('data-cfasync', 'false');
+                            })(document.head.appendChild(document.createElement('script')));
+                        `;
+                        document.head.appendChild(manualScript);
+                    }
+                }
+            }, 2000);
+            
+            // Function to initialize Monetag ads in containers
+            function initMonetagAds() {
+                if (typeof monetag === 'undefined') return;
+                
+                // Ad containers
+                var adContainers = [
+                    { id: 'monetag-ad-1', type: 'banner' },
+                    { id: 'monetag-ad-2', type: 'content' },
+                    { id: 'monetag-ad-3', type: 'footer' }
+                ];
+                
+                adContainers.forEach(function(ad) {
+                    var container = document.getElementById(ad.id);
+                    if (container) {
+                        // Add Monetag class for identification
+                        container.classList.add('monetag-loaded');
+                        
+                        // Check for ad content periodically
+                        var checkInterval = setInterval(function() {
+                            // Check if ad has loaded content
+                            var hasIframe = container.getElementsByTagName('iframe').length > 0;
+                            var hasImg = container.getElementsByTagName('img').length > 0;
+                            var hasAnchor = container.getElementsByTagName('a').length > 0;
+                            
+                            if (hasIframe || hasImg || hasAnchor) {
+                                console.log('💰 Ad loaded in:', ad.id);
+                                container.classList.remove('border-dashed');
+                                container.classList.add('border-solid', 'border-gray-300');
+                                container.innerHTML = ''; // Clear placeholder
+                                clearInterval(checkInterval);
+                            }
+                        }, 1000);
+                        
+                        // Stop checking after 10 seconds
+                        setTimeout(function() {
+                            clearInterval(checkInterval);
+                        }, 10000);
+                    }
+                });
+            }
+            
+            // Periodically check Monetag status
+            setInterval(function() {
+                if (typeof monetag !== 'undefined') {
+                    console.log('🔄 Monetag heartbeat - Active');
+                }
+            }, 30000); // Every 30 seconds
+        });
+    </script>
+    
+    <!-- Inline JavaScript for Navbar and Mobile Menu -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('navbar-scrolled', 'shadow-lg');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.classList.remove('navbar-scrolled', 'shadow-lg');
+                navbar.style.backgroundColor = '';
+                navbar.style.backdropFilter = '';
+            }
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Load more button functionality
+        document.getElementById('load-more').addEventListener('click', function() {
+            const originalHTML = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i> Memuat...';
+            this.disabled = true;
+            
+            // Simulate loading more content
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-check mr-2"></i> Semua Berita Dimuat';
+                this.classList.remove('bg-gray-200', 'hover:bg-gray-300', 'cursor-pointer');
+                this.classList.add('bg-green-100', 'text-green-800', 'cursor-default');
+                
+                // Monetag track event
+                if (typeof monetag !== 'undefined' && typeof monetag.track === 'function') {
+                    monetag.track('button_click', { button: 'load_more', page: 'home' });
+                }
+            }, 1500);
+        });
+        
+        // Newsletter form submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            if (emailInput.value) {
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Memproses...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Terdaftar!';
+                    submitBtn.classList.remove('bg-white', 'text-blue-600', 'hover:bg-gray-100');
+                    submitBtn.classList.add('bg-green-500', 'text-white', 'hover:bg-green-600');
+                    emailInput.value = '';
+                    
+                    // Monetag track event
+                    if (typeof monetag !== 'undefined' && typeof monetag.track === 'function') {
+                        monetag.track('newsletter_signup', { email: emailInput.value });
+                    }
+                    
+                    // Reset after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('bg-green-500', 'text-white', 'hover:bg-green-600');
+                        submitBtn.classList.add('bg-white', 'text-blue-600', 'hover:bg-gray-100');
+                    }, 3000);
+                }, 1000);
+            }
+        });
+        
+        // Monetag verification on window load
+        window.addEventListener('load', function() {
+            console.log('=== MONETAG VERIFICATION REPORT ===');
+            console.log('Timestamp:', new Date().toISOString());
+            console.log('Page URL:', window.location.href);
+            console.log('Zone ID:', '10284809');
+            console.log('Meta Tag:', document.querySelector('meta[name="monetag"]')?.content || 'Not found');
+            console.log('Script Source:', 'https://al5sm.com/tag.min.js');
+            console.log('====================================');
+        });
+    </script>
 </body>
 </html>

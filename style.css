@@ -160,3 +160,69 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+/* Tambahkan ini ke file style.css Anda */
+
+/* Styling untuk container iklan Monetag */
+.ad-container {
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ad-container.monetag-loaded {
+    border-style: solid !important;
+    border-color: #e5e7eb !important;
+    background-color: transparent !important;
+}
+
+.ad-container:has(iframe),
+.ad-container:has(img),
+.ad-container:has(a) {
+    border: none !important;
+    background: transparent !important;
+    min-height: auto !important;
+}
+
+/* Hide placeholder when ad loads */
+.ad-container:not(:empty):not(:has(.fa-spinner)) {
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Animation for ad loading */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.ad-container:has(.fa-spinner) {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive ads */
+@media (max-width: 768px) {
+    .ad-container {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+/* Monetag ad specific styling */
+.monetag-ad {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ensure ads don't overflow */
+.monetag-ad iframe,
+.monetag-ad img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
