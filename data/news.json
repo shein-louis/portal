@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Inovasi Terbaru dalam Bidang AI: Masa Depan Teknologi",
+    "description": "Perkembangan teknologi AI semakin pesat dengan penemuan baru yang mengubah cara kita berinteraksi dengan mesin. Inovasi ini diprediksi akan merevolusi berbagai industri dalam dekade mendatang.",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Teknologi",
+    "date": "2025-02-15"
+  },
+  {
+    "id": 2,
+    "title": "Timnas Indonesia Sukses Raih Kemenangan di Kualifikasi Piala Dunia",
+    "description": "Dengan permainan menawan, Timnas Indonesia berhasil meraih kemenangan penting dalam laga kualifikasi Piala Dunia 2026. Ini menjadi sejarah baru bagi sepakbola Indonesia.",
+    "image": "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
+    "category": "Olahraga",
+    "date": "2025-02-14"
+  },
+  {
+    "id": 3,
+    "title": "Kebijakan Ekonomi Baru Diumumkan Pemerintah untuk Stabilisasi Harga",
+    "description": "Pemerintah mengumumkan serangkaian kebijakan ekonomi baru yang bertujuan untuk menstabilkan harga kebutuhan pokok dan mendorong pertumbuhan ekonomi nasional.",
+    "image": "https://images.unsplash.com/photo-1583900985737-6d0495555783?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Ekonomi",
+    "date": "2025-02-13"
+  },
+  {
+    "id": 4,
+    "title": "Festival Film Internasional Kembali Digelar dengan Penuh Antusiasme",
+    "description": "Festival film internasional tahunan kembali digelar dengan partisipasi lebih dari 50 negara. Acara ini menjadi ajang pertukaran budaya melalui seni perfilman.",
+    "image": "https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Hiburan",
+    "date": "2025-02-12"
+  },
+  {
+    "id": 5,
+    "title": "Penemuan Baru dalam Pengobatan Kanker Memberikan Harapan Baru",
+    "description": "Para peneliti berhasil menemukan terapi baru untuk pengobatan kanker yang menunjukkan hasil signifikan dalam uji klinis. Penemuan ini memberi harapan bagi jutaan pasien di seluruh dunia.",
+    "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Kesehatan",
+    "date": "2025-02-11"
+  },
+  {
+    "id": 6,
+    "title": "Startup Fintech Lokal Raih Pendanaan Terbesar di Asia Tenggara",
+    "description": "Sebuah startup fintech asal Indonesia berhasil meraih pendanaan senilai ratusan juta dolar dari investor global. Ini menjadi pendanaan terbesar untuk startup teknologi finansial di kawasan Asia Tenggara.",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Bisnis",
+    "date": "2025-02-10"
+  },
+  {
+    "id": 7,
+    "title": "Reformasi Pendidikan: Kurikulum Baru Diterapkan Tahun Depan",
+    "description": "Kementerian Pendidikan mengumumkan penerapan kurikulum baru yang berfokus pada pengembangan keterampilan abad 21. Perubahan ini diharapkan dapat meningkatkan kualitas pendidikan nasional.",
+    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Pendidikan",
+    "date": "2025-02-09"
+  },
+  {
+    "id": 8,
+    "title": "Konferensi Perubahan Iklim Global Hasilkan Kesepakatan Baru",
+    "description": "Konferensi perubahan iklim global menghasilkan kesepakatan baru dalam upaya pengurangan emisi karbon. Negara-negara peserta berkomitmen untuk mencapai target lebih ambisius.",
+    "image": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    "category": "Lingkungan",
+    "date": "2025-02-08"
+  },
+  {
+    "id": 9,
+    "title": "Pameran Seni Kontemporer Tampilkan Karya Terbaik dari 30 Negara",
+    "description": "Pameran seni kontemporer internasional menampilkan karya-karya terbaik dari 30 negara di dunia. Acara ini menjadi ajang apresiasi seni modern dengan berbagai ekspresi budaya.",
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1458&q=80",
+    "category": "Budaya",
+    "date": "2025-02-07"
+  }
+]
