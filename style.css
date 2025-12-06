@@ -1,42 +1,42 @@
-/* Custom CSS untuk tambahan styling */
+/* Custom Styles for NewsPortal */
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease, 
+                transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar styles */
 .navbar-scrolled {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.95);
 }
 
-/* Smooth transition untuk semua elemen */
-* {
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Styling untuk card berita */
+/* News card hover effects */
 .news-card {
     transition: all 0.3s ease;
     border: 1px solid #e5e7eb;
 }
 
 .news-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
 }
 
-/* Styling untuk gambar berita */
-.news-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.news-card img {
     transition: transform 0.5s ease;
 }
 
-.news-card:hover .news-image {
+.news-card:hover img {
     transform: scale(1.05);
 }
 
-/* Category badge styling */
+/* Category badges */
 .category-badge {
     display: inline-block;
-    padding: 4px 12px;
+    padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -44,17 +44,46 @@
     letter-spacing: 0.5px;
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-    .news-image {
-        height: 200px;
-    }
+.bg-category-tech { background-color: #3b82f6; }
+.bg-category-sport { background-color: #10b981; }
+.bg-category-entertainment { background-color: #8b5cf6; }
+.bg-category-economy { background-color: #ef4444; }
+.bg-category-health { background-color: #06b6d4; }
+.bg-category-education { background-color: #f59e0b; }
+
+/* Read more button */
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #2563eb;
+    font-weight: 600;
 }
 
-@media (min-width: 1024px) {
-    .news-image {
-        height: 220px;
-    }
+.read-more-btn:hover {
+    color: #1d4ed8;
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Line clamping */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Custom scrollbar */
@@ -75,154 +104,104 @@
     background: #555;
 }
 
-/* Animation untuk loading */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    animation: fadeIn 0.5s ease-out;
-}
-
-/* Styling untuk advertisement containers */
-#monetag-ad-1,
-#monetag-ad-2,
-#monetag-ad-3 {
-    transition: all 0.3s ease;
-    min-height: 90px;
-}
-
-#monetag-ad-1:hover,
-#monetag-ad-2:hover,
-#monetag-ad-3:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
-}
-
-/* Hide ad placeholders when ads are loaded */
-#monetag-ad-1:has(iframe),
-#monetag-ad-1:has(img),
-#monetag-ad-2:has(iframe),
-#monetag-ad-2:has(img),
-#monetag-ad-3:has(iframe),
-#monetag-ad-3:has(img) {
-    background-color: transparent;
-    border: none;
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    #monetag-ad-1,
-    #monetag-ad-2,
-    #monetag-ad-3 {
-        min-height: 100px;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
-    }
-}
-
-/* Read more button styling */
-.read-more-btn {
-    display: inline-flex;
-    align-items: center;
-    font-weight: 600;
-    color: #2563eb;
-    transition: color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    color: #1d4ed8;
-}
-
-.read-more-btn i {
-    transition: transform 0.3s ease;
-}
-
-.read-more-btn:hover i {
-    transform: translateX(4px);
-}
-
-/* Line clamping for text */
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* Tambahkan ini ke file style.css Anda */
-
-/* Styling untuk container iklan Monetag */
-.ad-container {
+/* Ad containers */
+#ad-1, #ad-2 {
     transition: all 0.5s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-.ad-container.monetag-loaded {
-    border-style: solid !important;
-    border-color: #e5e7eb !important;
-    background-color: transparent !important;
-}
-
-.ad-container:has(iframe),
-.ad-container:has(img),
-.ad-container:has(a) {
+#ad-1:has(iframe),
+#ad-1:has(img),
+#ad-2:has(iframe),
+#ad-2:has(img) {
     border: none !important;
     background: transparent !important;
     min-height: auto !important;
 }
 
-/* Hide placeholder when ad loads */
-.ad-container:not(:empty):not(:has(.fa-spinner)) {
-    border: none !important;
-    background: transparent !important;
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
 }
 
-/* Animation for ad loading */
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+.modal-content {
+    background: white;
+    border-radius: 1rem;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
 }
 
-.ad-container:has(.fa-spinner) {
-    animation: pulse 2s infinite;
-}
-
-/* Responsive ads */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .ad-container {
+    #ad-1, #ad-2 {
         margin-left: -1rem;
         margin-right: -1rem;
         border-radius: 0;
         border-left: none;
         border-right: none;
     }
+    
+    .modal-content {
+        max-width: 95%;
+        margin: 1rem;
+    }
 }
 
-/* Monetag ad specific styling */
-.monetag-ad {
-    margin: 0 auto;
-    text-align: center;
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* News image fallback */
+.news-image {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-/* Ensure ads don't overflow */
-.monetag-ad iframe,
-.monetag-ad img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+@media (min-width: 768px) {
+    .news-image {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-image {
+        height: 220px;
+    }
+}
+
+/* Button animations */
+.btn-hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+/* Gradient text */
+.text-gradient {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Shadow utilities */
+.shadow-soft {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+/* Border animations */
+.hover-border-blue:hover {
+    border-color: #3b82f6;
 }

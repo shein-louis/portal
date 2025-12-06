@@ -1,8 +1,8 @@
-// news.js - Berita dengan data embedded
+// News Portal JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const newsContainer = document.getElementById('news-container');
     
-    // Data berita langsung dalam JavaScript
+    // News data (can be loaded from JSON file)
     const newsData = [
         {
             id: 1,
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 5,
             title: "Penemuan Baru dalam Pengobatan Kanker Memberikan Harapan Baru",
-            description: "Para peneliti berhasil menemukan terapi baru untuk pengobatan kanker yang menunjukkan hasil signifikan dalam uji klinis. Penemuan ini memberi harapan bagi jutaan pasien di seluruh dunia.",
+            description: "Para peneliti berhasil menemukan terapi baru untuk pengobatan kanker yang menunjukkan hasil signifikan dalam uji klinis. Penemuan ini memberi harangan bagi jutaan pasien di seluruh dunia.",
             image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
             category: "Kesehatan",
             date: "2025-02-11"
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Startup Fintech Lokal Raih Pendanaan Terbesar di Asia Tenggara",
             description: "Sebuah startup fintech asal Indonesia berhasil meraih pendanaan senilai ratusan juta dolar dari investor global. Ini menjadi pendanaan terbesar untuk startup teknologi finansial di kawasan Asia Tenggara.",
             image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-            category: "Bisnis",
+            category: "Ekonomi",
             date: "2025-02-10"
         },
         {
@@ -77,23 +77,41 @@ document.addEventListener('DOMContentLoaded', function() {
             date: "2025-02-07"
         }
     ];
-
-    // Fungsi untuk membuat card berita
+    
+    // Format date function
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('id-ID', options);
+    }
+    
+    // Get category color
+    function getCategoryColor(category) {
+        const colors = {
+            'Teknologi': 'bg-category-tech',
+            'Olahraga': 'bg-category-sport',
+            'Hiburan': 'bg-category-entertainment',
+            'Ekonomi': 'bg-category-economy',
+            'Kesehatan': 'bg-category-health',
+            'Pendidikan': 'bg-category-education',
+            'Lingkungan': 'bg-green-600',
+            'Budaya': 'bg-purple-600'
+        };
+        return colors[category] || 'bg-gray-600';
+    }
+    
+    // Create news card
     function createNewsCard(news) {
         const card = document.createElement('div');
-        card.className = 'news-card bg-white rounded-xl overflow-hidden fade-in';
+        card.className = 'news-card bg-white rounded-xl overflow-hidden animate-fade-in';
+        card.dataset.category = news.category;
         
-        // Format tanggal
         const formattedDate = formatDate(news.date);
-        
-        // Tentukan warna kategori
         const categoryColor = getCategoryColor(news.category);
         
-        // Isi konten card
         card.innerHTML = `
             <div class="relative overflow-hidden">
                 <img src="${news.image}" alt="${news.title}" 
-                     class="news-image w-full" 
+                     class="news-image w-full"
                      loading="lazy"
                      onerror="this.src='https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80'">
                 <div class="absolute top-4 left-4">
@@ -106,102 +124,112 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">${news.title}</h3>
                 <p class="text-gray-600 mb-5 line-clamp-3">${news.description}</p>
-                <a href="#" class="read-more-btn inline-flex items-center" data-id="${news.id}">
-                    Baca Selengkapnya <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                </a>
+                <button class="read-more-btn" data-id="${news.id}">
+                    Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                </button>
             </div>
         `;
         
-        // Event listener untuk tombol
+        // Add click event
         const readMoreBtn = card.querySelector('.read-more-btn');
-        readMoreBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const newsId = this.getAttribute('data-id');
-            const selectedNews = newsData.find(item => item.id == newsId);
+        readMoreBtn.addEventListener('click', function() {
+            showNewsModal(news, formattedDate, categoryColor);
             
-            if (selectedNews) {
-                // Simulasi pembukaan berita
-                const modalHTML = `
-                    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-                            <div class="p-6">
-                                <div class="flex justify-between items-start mb-4">
-                                    <div>
-                                        <span class="${categoryColor} text-white px-3 py-1 rounded-full text-sm font-medium">
-                                            ${selectedNews.category}
-                                        </span>
-                                        <p class="text-gray-500 text-sm mt-2">
-                                            <i class="far fa-calendar-alt mr-1"></i>${formattedDate}
-                                        </p>
-                                    </div>
-                                    <button class="text-gray-500 hover:text-gray-700 text-2xl" onclick="this.closest('.fixed').remove()">
-                                        &times;
-                                    </button>
-                                </div>
-                                <h2 class="text-2xl font-bold text-gray-900 mb-4">${selectedNews.title}</h2>
-                                <img src="${selectedNews.image}" alt="${selectedNews.title}" 
-                                     class="w-full h-auto rounded-lg mb-6">
-                                <div class="text-gray-700 leading-relaxed">
-                                    <p class="mb-4">${selectedNews.description}</p>
-                                    <p class="mb-4">Ini adalah simulasi konten berita lengkap. Dalam implementasi nyata, di sini akan berisi artikel berita yang lengkap dengan beberapa paragraf, gambar tambahan, dan informasi detail.</p>
-                                    <p>Berita ini berasal dari sumber terpercaya dan telah melalui proses verifikasi fakta untuk memastikan keakuratan informasi yang disajikan.</p>
-                                </div>
-                                <div class="mt-8 pt-6 border-t border-gray-200">
-                                    <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                                        <i class="fas fa-share-alt mr-2"></i> Bagikan Berita
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                // Tambahkan modal ke body
-                const modalDiv = document.createElement('div');
-                modalDiv.innerHTML = modalHTML;
-                document.body.appendChild(modalDiv);
-                
-                // Tambahkan event untuk close modal
-                modalDiv.querySelector('.fixed').addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        this.remove();
-                    }
+            // Track with Monetag
+            if (typeof monetag !== 'undefined') {
+                monetag.track('news_click', {
+                    id: news.id,
+                    category: news.category,
+                    title: news.title
                 });
-                
-                // Monetag tracking untuk klik berita
-                if (typeof monetag !== 'undefined' && typeof monetag.track === 'function') {
-                    monetag.track('news_click', { id: newsId, category: selectedNews.category });
-                }
             }
         });
         
         return card;
     }
     
-    // Fungsi untuk memformat tanggal
-    function formatDate(dateString) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('id-ID', options);
-    }
-    
-    // Fungsi untuk menentukan warna berdasarkan kategori
-    function getCategoryColor(category) {
-        const colors = {
-            'Teknologi': 'bg-blue-600',
-            'Olahraga': 'bg-green-600',
-            'Ekonomi': 'bg-red-600',
-            'Hiburan': 'bg-purple-600',
-            'Kesehatan': 'bg-teal-600',
-            'Bisnis': 'bg-yellow-600',
-            'Pendidikan': 'bg-pink-600',
-            'Lingkungan': 'bg-indigo-600',
-            'Budaya': 'bg-amber-600'
-        };
+    // Show news modal
+    function showNewsModal(news, formattedDate, categoryColor) {
+        const modalHTML = `
+            <div class="modal-overlay">
+                <div class="modal-content w-full max-w-2xl">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="category-badge ${categoryColor} text-white">
+                                    ${news.category}
+                                </span>
+                                <p class="text-gray-500 text-sm mt-2">
+                                    <i class="far fa-calendar-alt mr-1"></i>${formattedDate}
+                                </p>
+                            </div>
+                            <button class="modal-close text-gray-500 hover:text-gray-700 text-2xl">
+                                &times;
+                            </button>
+                        </div>
+                        
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">${news.title}</h2>
+                        
+                        <img src="${news.image}" alt="${news.title}" 
+                             class="w-full h-auto rounded-lg mb-6">
+                        
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>${news.description}</p>
+                            <p>Ini adalah simulasi konten berita lengkap. Dalam implementasi nyata, di sini akan berisi artikel berita yang lengkap dengan beberapa paragraf, gambar tambahan, dan informasi detail.</p>
+                            <p>Berita ini berasal dari sumber terpercaya dan telah melalui proses verifikasi fakta untuk memastikan keakuratan informasi yang disajikan.</p>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200 flex justify-between">
+                            <button class="share-btn px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                <i class="fas fa-share-alt mr-2"></i> Bagikan
+                            </button>
+                            <button class="close-btn px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+                                Tutup
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
         
-        return colors[category] || 'bg-gray-600';
+        // Add modal to body
+        const modalDiv = document.createElement('div');
+        modalDiv.innerHTML = modalHTML;
+        document.body.appendChild(modalDiv);
+        
+        // Add event listeners
+        const overlay = modalDiv.querySelector('.modal-overlay');
+        const closeBtn = modalDiv.querySelector('.close-btn');
+        const modalCloseBtn = modalDiv.querySelector('.modal-close');
+        const shareBtn = modalDiv.querySelector('.share-btn');
+        
+        function closeModal() {
+            overlay.style.animation = 'fadeOut 0.3s ease';
+            overlay.querySelector('.modal-content').style.animation = 'slideDown 0.3s ease';
+            setTimeout(() => modalDiv.remove(), 300);
+        }
+        
+        overlay.addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        
+        closeBtn.addEventListener('click', closeModal);
+        modalCloseBtn.addEventListener('click', closeModal);
+        
+        shareBtn.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: news.title,
+                    text: news.description,
+                    url: window.location.href
+                });
+            } else {
+                alert('Berita berhasil disalin! Anda dapat membagikannya melalui aplikasi lain.');
+            }
+        });
     }
     
-    // Render semua berita
+    // Render all news
     function renderNews() {
         newsContainer.innerHTML = '';
         newsData.forEach(news => {
@@ -209,14 +237,23 @@ document.addEventListener('DOMContentLoaded', function() {
             newsContainer.appendChild(newsCard);
         });
         
-        // Monetag tracking untuk page view
-        setTimeout(() => {
-            if (typeof monetag !== 'undefined' && typeof monetag.track === 'function') {
-                monetag.track('page_view', { page: 'home', item_count: newsData.length });
-            }
-        }, 1000);
+        console.log(`✅ ${newsData.length} berita berhasil dimuat`);
     }
     
-    // Inisialisasi
+    // Initialize
     renderNews();
+    
+    // Add CSS for modal animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(20px); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
 });

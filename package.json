@@ -1,0 +1,14 @@
+{
+  "name": "news-portal",
+  "version": "1.0.0",
+  "description": "Portal berita modern dengan Monetag integration",
+  "scripts": {
+    "dev": "npx live-server .",
+    "build": "echo 'Static website - no build required'"
+  },
+  "keywords": ["news", "portal", "monetag", "tailwind"],
+  "author": "NewsPortal",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
