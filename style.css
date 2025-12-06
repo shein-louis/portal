@@ -1,22 +1,60 @@
-/* Custom CSS untuk tambahan styling yang tidak tersedia di Tailwind */
-
-/* Smooth shadow transition untuk navbar */
+/* Custom CSS untuk tambahan styling */
 .navbar-scrolled {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Custom hover effect untuk card berita */
-.news-card {
-    transition: all 0.3s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-8px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Smooth transition untuk semua elemen */
 * {
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Styling untuk card berita */
+.news-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk gambar berita */
+.news-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image {
+    transform: scale(1.05);
+}
+
+/* Category badge styling */
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .news-image {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-image {
+        height: 220px;
+    }
 }
 
 /* Custom scrollbar */
@@ -47,40 +85,44 @@
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Responsive image scaling */
-.news-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+/* Styling untuk advertisement containers */
+#monetag-ad-1,
+#monetag-ad-2,
+#monetag-ad-3 {
+    transition: all 0.3s ease;
+    min-height: 90px;
 }
 
-@media (min-width: 768px) {
-    .news-image {
-        height: 200px;
+#monetag-ad-1:hover,
+#monetag-ad-2:hover,
+#monetag-ad-3:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+/* Hide ad placeholders when ads are loaded */
+#monetag-ad-1:has(iframe),
+#monetag-ad-1:has(img),
+#monetag-ad-2:has(iframe),
+#monetag-ad-2:has(img),
+#monetag-ad-3:has(iframe),
+#monetag-ad-3:has(img) {
+    background-color: transparent;
+    border: none;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    #monetag-ad-1,
+    #monetag-ad-2,
+    #monetag-ad-3 {
+        min-height: 100px;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
     }
-}
-
-@media (min-width: 1024px) {
-    .news-image {
-        height: 220px;
-    }
-}
-
-/* Category badge styling */
-.category-badge {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Date styling */
-.news-date {
-    font-size: 0.875rem;
-    color: #6b7280;
 }
 
 /* Read more button styling */
@@ -102,4 +144,19 @@
 
 .read-more-btn:hover i {
     transform: translateX(4px);
+}
+
+/* Line clamping for text */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
