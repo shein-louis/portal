@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsPortal - Berita Terkini & Terpercaya</title>
+    
+    <!-- Monetag Integration -->
+    <meta name="monetag" content="b4c48ecf0794ac312070eb6ceb044ab0">
+    <script src="https://quge5.com/88/tag.min.js" data-zone="190749" async data-cfasync="false"></script>
+    
     <!-- Tailwind CSS CDN -->
-     <meta name="monetag" content="b4c48ecf0794ac312070eb6ceb044ab0">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
 </head>
-<script src="https://quge5.com/88/tag.min.js" data-zone="190749" async data-cfasync="false"></script>
 <body class="bg-gray-50 font-sans text-gray-800">
     <!-- Navigation Bar -->
     <nav id="navbar" class="fixed w-full bg-white z-50 transition-all duration-300">
@@ -120,6 +122,13 @@
             </div>
         </section>
         
+        <!-- Monetag Ad Placement (Opsional: Tambahkan tempat iklan) -->
+        <div class="my-12 p-4 bg-gray-100 rounded-lg text-center">
+            <p class="text-gray-500 text-sm mb-2">Advertisement</p>
+            <!-- Monetag akan menampilkan iklan di sini secara otomatis -->
+            <div id="monetag-ads"></div>
+        </div>
+        
         <!-- Newsletter Section -->
         <section class="mt-20 mb-16">
             <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
@@ -200,6 +209,9 @@
     <!-- JavaScript Files -->
     <script src="news.js"></script>
     
+    <!-- Monetag Script (Tambahan di sini untuk memastikan berjalan) -->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="190749" async data-cfasync="false"></script>
+    
     <!-- Inline JavaScript for Navbar and Mobile Menu -->
     <script>
         // Navbar scroll effect
@@ -248,6 +260,12 @@
                 this.classList.remove('bg-gray-200', 'hover:bg-gray-300');
                 this.classList.add('bg-green-100', 'text-green-800');
             }, 1500);
+        });
+        
+        // Monetag initialization check
+        window.addEventListener('load', function() {
+            console.log('Monetag script loaded for zone: 190749');
+            // Anda bisa menambahkan logika tambahan di sini jika perlu
         });
     </script>
 </body>
