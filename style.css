@@ -1,18 +1,36 @@
-/* ========== NAVBAR STYLES ========== */
+/* =====================================================
+   ========== NAVBAR (FIXED, SIMPLE, CLEAN) ==========
+   ===================================================== */
 
-/* Navbar container */
 #navbar {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+
+    padding: 0.75rem 1rem;
+    transition: none !important;
 }
 
-/* Navbar links */
+/* body padding supaya konten tidak ketiban navbar */
+body {
+    padding-top: 72px; 
+}
+
+/* Navbar desktop links */
 .nav-link {
     position: relative;
     display: flex;
     align-items: center;
+
     color: #4b5563;
     font-weight: 500;
     padding: 0.5rem 0;
+
     transition: color 0.2s ease;
 }
 
@@ -25,16 +43,15 @@
     font-weight: 600;
 }
 
-/* Underline animation FIXED */
+/* underline effect */
 .nav-underline {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
-    width: 0%;
+    width: 0;
     height: 2px;
     background-color: #3b82f6;
-    transition: width 0.3s ease;
-    pointer-events: none;
+    transition: width 0.25s ease;
 }
 
 .nav-link:hover .nav-underline,
@@ -42,20 +59,21 @@
     width: 100%;
 }
 
-/* Mobile menu links */
+/* Mobile nav links */
 .mobile-nav-link {
     display: flex;
     align-items: center;
     padding: 0.75rem 1rem;
+
     color: #4b5563;
     border-radius: 0.5rem;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .mobile-nav-link:hover {
     background-color: #f3f4f6;
     color: #3b82f6;
-    transform: translateX(4px);
 }
 
 .mobile-nav-link.active {
@@ -66,25 +84,30 @@
 
 /* Search input */
 .search-input {
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .search-input:focus {
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
 }
 
-/* Social Icons */
+/* =====================================================
+   ========== FOOTER & ICONS ==========
+   ===================================================== */
+
 .social-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     width: 40px;
     height: 40px;
-    background-color: #374151;
     border-radius: 50%;
+    background-color: #374151;
     color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
@@ -99,7 +122,7 @@
 /* Footer links */
 .footer-link {
     color: #9ca3af;
-    transition: color 0.2s ease, padding-left 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .footer-link:hover {
@@ -107,37 +130,45 @@
     padding-left: 4px;
 }
 
-/* ========== GENERAL / COMPONENTS ========== */
+/* =====================================================
+   ========== GENERAL UI / COMPONENTS ==========
+   ===================================================== */
 
-/* NEWS card */
+* {
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+/* Cards */
 .news-card {
     border: 1px solid #e5e7eb;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    border-radius: 0.75rem;
+    transition: all 0.3s ease;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     border-color: #3b82f6;
 }
 
 .news-card img {
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .news-card:hover img {
     transform: scale(1.05);
 }
 
-/* Category Badges */
+/* Category badges */
 .category-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 600;
+
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -149,13 +180,12 @@
 .bg-category-health { background-color: #06b6d4; }
 .bg-category-education { background-color: #f59e0b; }
 
-/* Read more link */
+/* Read more */
 .read-more-btn {
     display: inline-flex;
     align-items: center;
     color: #2563eb;
     font-weight: 600;
-    transition: color 0.2s ease;
 }
 
 .read-more-btn:hover {
@@ -170,25 +200,38 @@
     transform: translateX(4px);
 }
 
-/* Clamp text */
-.line-clamp-2,
-.line-clamp-3 {
+/* Clamping */
+.line-clamp-2 {
     display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-.line-clamp-2 { -webkit-line-clamp: 2; }
-.line-clamp-3 { -webkit-line-clamp: 3; }
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover { background: #555; }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /* Ads */
 #ad-1, #ad-2 {
@@ -201,16 +244,23 @@
 #ad-2:has(img) {
     border: none !important;
     background: transparent !important;
+    min-height: auto !important;
 }
 
-/* Modal */
+/* =====================================================
+   ========== MODAL ==========
+   ===================================================== */
+
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+
+    background: rgba(0,0,0,0.5);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     z-index: 1000;
     animation: fadeIn 0.3s ease;
 }
@@ -218,9 +268,11 @@
 .modal-content {
     background: white;
     border-radius: 1rem;
+
     max-width: 90%;
     max-height: 90vh;
     overflow-y: auto;
+
     animation: slideUp 0.3s ease;
 }
 
@@ -230,6 +282,13 @@
         margin-left: -1rem;
         margin-right: -1rem;
         border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        margin: 1rem;
     }
 
     .nav-link span {
@@ -237,15 +296,33 @@
     }
 }
 
-/* Animations */
-@keyframes pulse { 0%,100% {opacity:1;} 50%{opacity:.5;} }
-.loading-pulse { animation: pulse 2s infinite; }
+/* Loading */
+@keyframes pulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
 
+.loading-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* News image fallback */
 .news-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
 
-@media (min-width: 768px) { .news-image { height: 200px; } }
-@media (min-width: 1024px) { .news-image { height: 220px; } }
+@media (min-width: 768px) {
+    .news-image { height: 200px; }
+}
+
+@media (min-width: 1024px) {
+    .news-image { height: 220px; }
+}
+
+/* Animations */
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes slideDown { from { transform: translateY(0); opacity: 1; } to { transform: translateY(20px); opacity: 0; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
