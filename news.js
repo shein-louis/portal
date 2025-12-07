@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 3,
-            title: "Kebijakan Ekonomi Baru Diumumkan Pemerintah untuk Stabilisasi Harga",
-            description: "Pemerintah mengumumkan serangkaian kebijakan ekonomi baru yang bertujuan untuk menstabilkan harga kebutuhan pokok dan mendorong pertumbuhan ekonomi nasional.",
+            title: "Tutorial Cara nonton ++",
+            description: "Kalian klik tombol dibawah sampai buka pencarian google gitu terus scroll sampe bawah, sampe nemu tombol dengan tulisan link here, dan pencet, kalau nggak keluar tombolnya kalian back dan pencet tombol dibawah sampe muncul.",
             image: "https://images.unsplash.com/photo-1583900985737-6d0495555783?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
             category: "Ekonomi",
             date: "2025-02-13"
@@ -149,85 +149,69 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Show news modal
-    function showNewsModal(news, formattedDate, categoryColor) {
-        const modalHTML = `
-            <div class="modal-overlay">
-                <div class="modal-content w-full max-w-2xl">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <span class="category-badge ${categoryColor} text-white">
-                                    ${news.category}
-                                </span>
-                                <p class="text-gray-500 text-sm mt-2">
-                                    <i class="far fa-calendar-alt mr-1"></i>${formattedDate}
-                                </p>
-                            </div>
-                            <button class="modal-close text-gray-500 hover:text-gray-700 text-2xl">
-                                &times;
-                            </button>
+function showNewsModal(news, formattedDate, categoryColor) {
+    const modalHTML = `
+        <div class="modal-overlay">
+            <div class="modal-content w-full max-w-2xl">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="category-badge ${categoryColor} text-white">
+                                ${news.category}
+                            </span>
+                            <p class="text-gray-500 text-sm mt-2">
+                                <i class="far fa-calendar-alt mr-1"></i>${formattedDate}
+                            </p>
                         </div>
-                        
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">${news.title}</h2>
-                        
-                        <img src="${news.image}" alt="${news.title}" 
-                             class="w-full h-auto rounded-lg mb-6">
-                        
-                        <div class="text-gray-700 leading-relaxed space-y-4">
-                            <p>${news.description}</p>
-                            <p>Ini adalah simulasi konten berita lengkap. Dalam implementasi nyata, di sini akan berisi artikel berita yang lengkap dengan beberapa paragraf, gambar tambahan, dan informasi detail.</p>
-                            <p>Berita ini berasal dari sumber terpercaya dan telah melalui proses verifikasi fakta untuk memastikan keakuratan informasi yang disajikan.</p>
-                        </div>
-                        
-                        <div class="mt-8 pt-6 border-t border-gray-200 flex justify-between">
-                            <button class="share-btn px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                                <i class="fas fa-share-alt mr-2"></i> Bagikan
-                            </button>
-                            <button class="close-btn px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
-                                Tutup
-                            </button>
-                        </div>
+                        <button class="modal-close text-gray-500 hover:text-gray-700 text-2xl">
+                            &times;
+                        </button>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">${news.title}</h2>
+                    
+                    <img src="${news.image}" alt="${news.title}" 
+                         class="w-full h-auto rounded-lg mb-6">
+                    
+                    <div class="text-gray-700 leading-relaxed space-y-4">
+                        <p>${news.description}</p>
+                        <p>Ini adalah simulasi konten berita lengkap. Dalam implementasi nyata, di sini akan berisi artikel berita yang lengkap dengan beberapa paragraf, gambar tambahan, dan informasi detail.</p>
+                        <p>Berita ini berasal dari sumber terpercaya dan telah melalui proses verifikasi fakta untuk memastikan keakuratan informasi yang disajikan.</p>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <a href="https://otieu.com/4/10275861" 
+                           class="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                           onclick="event.preventDefault(); alert('Link nonton akan tersedia!');">
+                            <i class="fas fa-video mr-2"></i> Link Nonton
+                        </a>
                     </div>
                 </div>
             </div>
-        `;
-        
-        // Add modal to body
-        const modalDiv = document.createElement('div');
-        modalDiv.innerHTML = modalHTML;
-        document.body.appendChild(modalDiv);
-        
-        // Add event listeners
-        const overlay = modalDiv.querySelector('.modal-overlay');
-        const closeBtn = modalDiv.querySelector('.close-btn');
-        const modalCloseBtn = modalDiv.querySelector('.modal-close');
-        const shareBtn = modalDiv.querySelector('.share-btn');
-        
-        function closeModal() {
-            overlay.style.animation = 'fadeOut 0.3s ease';
-            overlay.querySelector('.modal-content').style.animation = 'slideDown 0.3s ease';
-            setTimeout(() => modalDiv.remove(), 300);
-        }
-        
-        overlay.addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-        
-        closeBtn.addEventListener('click', closeModal);
-        modalCloseBtn.addEventListener('click', closeModal);
-        
-        shareBtn.addEventListener('click', function() {
-            if (navigator.share) {
-                navigator.share({
-                    title: news.title,
-                    text: news.description,
-                    url: window.location.href
-                });
-            } else {
-                alert('Berita berhasil disalin! Anda dapat membagikannya melalui aplikasi lain.');
-            }
-        });
+        </div>
+    `;
+    
+    // Add modal to body
+    const modalDiv = document.createElement('div');
+    modalDiv.innerHTML = modalHTML;
+    document.body.appendChild(modalDiv);
+    
+    // Add event listeners
+    const overlay = modalDiv.querySelector('.modal-overlay');
+    const modalCloseBtn = modalDiv.querySelector('.modal-close');
+    
+    function closeModal() {
+        overlay.style.animation = 'fadeOut 0.3s ease';
+        overlay.querySelector('.modal-content').style.animation = 'slideDown 0.3s ease';
+        setTimeout(() => modalDiv.remove(), 300);
     }
+    
+    overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+    
+    modalCloseBtn.addEventListener('click', closeModal);
+}
     
     // Render all news
     function renderNews() {
