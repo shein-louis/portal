@@ -175,8 +175,6 @@ function showNewsModal(news, formattedDate, categoryColor) {
                     
                     <div class="text-gray-700 leading-relaxed space-y-4">
                         <p>${news.description}</p>
-                        <p>Ini adalah simulasi konten berita lengkap. Dalam implementasi nyata, di sini akan berisi artikel berita yang lengkap dengan beberapa paragraf, gambar tambahan, dan informasi detail.</p>
-                        <p>Berita ini berasal dari sumber terpercaya dan telah melalui proses verifikasi fakta untuk memastikan keakuratan informasi yang disajikan.</p>
                     </div>
                     
                     <div class="mt-8 pt-6 border-t border-gray-200">
