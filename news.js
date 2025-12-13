@@ -179,8 +179,7 @@ function showNewsModal(news, formattedDate, categoryColor) {
                     
                     <div class="mt-8 pt-6 border-t border-gray-200">
                         <a href="https://otieu.com/4/10275861" 
-                           class="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                           onclick="event.preventDefault(); alert('Link nonton akan tersedia!');">
+                           class="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                             <i class="fas fa-video mr-2"></i> Link Nonton
                         </a>
                     </div>
