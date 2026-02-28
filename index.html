@@ -1,1 +1,425 @@
-<!DOCTYPE html><html lang="id"><head><meta name="monetag" content="b4c48ecf0794ac312070eb6ceb044ab0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NewsPortal - Berita Terkini & Terpercaya</title><script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#1e40af'},animation:{'fade-in':'fadeIn 0.5s ease-out','slide-up':'slideUp 0.3s ease-out'},keyframes:{fadeIn:{'0%':{opacity:'0'},'100%':{opacity:'1'}},slideUp:{'0%':{transform:'translateY(10px)',opacity:'0'},'100%':{transform:'translateY(0)',opacity:'1'}}}}}}</script><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%233b82f6%22>📰</text></svg>"><link rel="preconnect" href="https://6opo.com"><link rel="preconnect" href="https://al5sm.com"></head><body class="bg-gray-50 font-sans text-gray-800"><script>(function(){console.log('🚀 Loading Monetag script...');var script1=document.createElement('script');script1.dataset.zone='190749';script1.src='https://6opo.com/88/tag.min.js?v='+Date.now();script1.async=true;script1.setAttribute('data-cfasync','false');script1.onload=function(){console.log('✅ Monetag script loaded successfully');if(typeof monetag!=='undefined'){console.log('💰 Monetag API ready for zone: 190749')}};script1.onerror=function(){console.log('🔄 Loading backup script...');var script2=document.createElement('script');script2.innerHTML=`(function(s){s.dataset.zone='190749';s.src='https://al5sm.com/tag.min.js?backup='+Date.now();})(document.head.appendChild(document.createElement('script')));`;document.head.appendChild(script2)};document.head.appendChild(script1)})();</script><nav id="navbar" class="fixed w-full bg-white z-50 transition-all duration-300"><div class="container mx-auto px-4 py-4"><div class="flex justify-between items-center"><div class="flex items-center space-x-2"><div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"><i class="fas fa-newspaper text-white text-xl"></i></div><a href="#" class="text-2xl font-bold text-gray-900">News<span class="text-blue-600">Portal</span></a></div><div class="hidden md:flex space-x-8"><a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Beranda</a><a href="#berita" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Berita</a><a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Teknologi</a><a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Olahraga</a><a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Hiburan</a></div><div class="flex items-center space-x-4"><button id="mobile-menu-button" class="md:hidden text-gray-700"><i class="fas fa-bars text-xl"></i></button></div></div><div id="mobile-menu" class="hidden md:hidden mt-4 pb-2"><div class="flex flex-col space-y-4"><a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Beranda</a><a href="#berita" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Berita</a><a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Teknologi</a><a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Olahraga</a><a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Hiburan</a></div></div></div></nav><section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-gray-100"><div class="container mx-auto px-4"><div class="max-w-4xl mx-auto text-center"><h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">Berita <span class="text-blue-600">Terkini</span> & Terpercaya</h1><p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-up">Dapatkan informasi terbaru dan akurat dari berbagai bidang: teknologi, politik, olahraga, hiburan, dan banyak lagi.</p><div class="flex flex-wrap justify-center gap-4"><a href="#berita" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"><i class="fas fa-newspaper mr-2"></i> Baca Berita</a><a href="#newsletter" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300 border border-blue-600"><i class="fas fa-bell mr-2"></i> Berlangganan</a></div></div></div></section><main class="container mx-auto px-4 py-8"><section id="berita" class="mb-16"><div class="flex justify-between items-center mb-10"><div><h2 class="text-3xl md:text-4xl font-bold text-gray-900">Berita Terbaru</h2><p class="text-gray-600 mt-2">Informasi terkini dari berbagai sumber terpercaya</p></div><div class="hidden md:flex items-center space-x-2"><span class="text-gray-500">Filter:</span><select id="category-filter" class="bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="all">Semua Kategori</option><option value="Teknologi">Teknologi</option><option value="Olahraga">Olahraga</option><option value="Hiburan">Hiburan</option><option value="Ekonomi">Ekonomi</option></select></div></div><div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div class="col-span-full text-center py-12"><div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div><p class="text-gray-600">Memuat berita...</p></div></div><div class="text-center mt-12"><button id="load-more" class="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition duration-300"><i class="fas fa-plus mr-2"></i> Muat Lebih Banyak</button></div></section><div class="my-12"><div class="text-center text-gray-500 text-sm mb-2"><span class="bg-gray-100 px-3 py-1 rounded-full"><i class="fas fa-ad mr-1"></i> Sponsored Content</span></div><div id="ad-2" class="min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center"><div class="text-center text-gray-400"><i class="fas fa-ad text-xl mb-2"></i><p class="text-sm">Advertisement area</p></div></div></div><section id="newsletter" class="mt-20 mb-16"><div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center"><h2 class="text-2xl md:text-3xl font-bold mb-4">Tetap Terinformasi</h2><p class="mb-6 max-w-2xl mx-auto">Dapatkan berita terkini langsung ke email Anda. Berlangganan newsletter kami dan jangan lewatkan perkembangan terbaru.</p><form id="subscribe-form" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4"><input type="email" placeholder="Masukkan email Anda" required class="flex-grow px-6 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"><button type="submit" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300">Berlangganan</button></form></div></section></main><footer class="bg-gray-900 text-white py-12"><div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-4 gap-8"><div class="md:col-span-2"><div class="flex items-center space-x-2 mb-6"><div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center"><i class="fas fa-newspaper text-white text-xl"></i></div><a href="#" class="text-2xl font-bold">News<span class="text-blue-400">Portal</span></a></div><p class="text-gray-400 mb-6 max-w-md">Portal berita terpercaya yang menyajikan informasi terkini dan akurat dari berbagai bidang.</p><div class="flex space-x-4"><a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-facebook-f"></i></a><a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition"><i class="fab fa-twitter"></i></a><a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition"><i class="fab fa-youtube"></i></a><a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition"><i class="fab fa-instagram"></i></a></div></div><div><h3 class="text-xl font-bold mb-6">Tautan Cepat</h3><ul class="space-y-3"><li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li><li><a href="#berita" class="text-gray-400 hover:text-white transition">Berita</a></li><li><a href="https://otieu.com/4/10285461" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li><li><a href="#" class="text-gray-400 hover:text-white transition">Kontak</a></li></ul></div><div><h3 class="text-xl font-bold mb-6">Kategori</h3><ul class="space-y-3"><li><a href="#" class="text-gray-400 hover:text-white transition">Teknologi</a></li><li><a href="#" class="text-gray-400 hover:text-white transition">Olahraga</a></li><li><a href="#" class="text-gray-400 hover:text-white transition">Politik</a></li><li><a href="#" class="text-gray-400 hover:text-white transition">Hiburan</a></li></ul></div></div><div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500"><p>&copy; 2025 NewsPortal. All rights reserved.</p></div></div></footer><script src="news.js"></script><script>window.addEventListener('scroll',function(){const navbar=document.getElementById('navbar');if(window.scrollY>20){navbar.classList.add('shadow-lg','bg-white','bg-opacity-95','backdrop-blur-sm')}else{navbar.classList.remove('shadow-lg','bg-opacity-95','backdrop-blur-sm')}});document.getElementById('mobile-menu-button').addEventListener('click',function(){const mobileMenu=document.getElementById('mobile-menu');mobileMenu.classList.toggle('hidden');const icon=this.querySelector('i');if(mobileMenu.classList.contains('hidden')){icon.classList.remove('fa-times');icon.classList.add('fa-bars')}else{icon.classList.remove('fa-bars');icon.classList.add('fa-times')}});document.querySelectorAll('#mobile-menu a').forEach(link=>{link.addEventListener('click',()=>{document.getElementById('mobile-menu').classList.add('hidden');document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars')})});document.getElementById('category-filter').addEventListener('change',function(){const category=this.value;const newsCards=document.querySelectorAll('.news-card');newsCards.forEach(card=>{if(category==='all'||card.dataset.category===category){card.classList.remove('hidden');card.classList.add('animate-fade-in')}else{card.classList.add('hidden')}})});document.getElementById('load-more').addEventListener('click',function(){const btn=this;btn.innerHTML='<i class="fas fa-spinner animate-spin mr-2"></i> Memuat...';btn.disabled=true;setTimeout(()=>{btn.innerHTML='<i class="fas fa-check mr-2"></i> Semua Berita Dimuat';btn.classList.remove('bg-gray-200','hover:bg-gray-300');btn.classList.add('bg-green-100','text-green-800');if(typeof monetag!=='undefined'){monetag.track('load_more_clicked')}},1500)});document.getElementById('subscribe-form').addEventListener('submit',function(e){e.preventDefault();const email=this.querySelector('input[type="email"]').value;const btn=this.querySelector('button[type="submit"]');const originalText=btn.innerHTML;btn.innerHTML='<i class="fas fa-spinner fa-spin mr-2"></i> Memproses...';btn.disabled=true;setTimeout(()=>{btn.innerHTML='<i class="fas fa-check mr-2"></i> Terdaftar!';btn.classList.remove('bg-white','text-blue-600');btn.classList.add('bg-green-500','text-white');this.reset();if(typeof monetag!=='undefined'){monetag.track('newsletter_signup',{email:email})};setTimeout(()=>{btn.innerHTML=originalText;btn.disabled=false;btn.classList.remove('bg-green-500','text-white');btn.classList.add('bg-white','text-blue-600')},3000)},1000)});window.addEventListener('load',function(){console.log('Website loaded successfully');setTimeout(()=>{if(typeof monetag!=='undefined'){console.log('✅ Monetag is active and ready');console.log('Zone:',monetag.zone||'190749')}else{console.log('⚠️ Monetag not detected, ads may not show')}},3000);const adContainers=['ad-1','ad-2'];adContainers.forEach(id=>{const container=document.getElementById(id);if(container){const checkAd=setInterval(()=>{const hasIframe=container.querySelector('iframe');const hasImg=container.querySelector('img');const hasAnchor=container.querySelector('a');if(hasIframe||hasImg||hasAnchor){container.innerHTML='';clearInterval(checkAd)}},1000);setTimeout(()=>clearInterval(checkAd),10000)}})});</script></body></html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Meta Tags & Monetag -->
+    <meta name="monetag" content="b4c48ecf0794ac312070eb6ceb044ab0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>NewsPortal - Berita Terkini & Terpercaya</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.3s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(10px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%233b82f6%22>📰</text></svg>">
+    
+    <!-- Preconnect untuk Monetag -->
+    <link rel="preconnect" href="https://6opo.com">
+    <link rel="preconnect" href="https://al5sm.com">
+    
+    <!-- Monetag Script - Primary -->
+    <script>
+        (function(s) {
+            s.dataset.zone = '10284809';
+            s.src = 'https://al5sm.com/tag.min.js';
+        })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+    </script>
+    
+    <!-- Backup Script -->
+    <script>
+        (function() {
+            console.log('🚀 Loading Monetag script...');
+            
+            var script1 = document.createElement('script');
+            script1.dataset.zone = '10284809'; // Updated zone
+            script1.src = 'https://6opo.com/88/tag.min.js?v=' + Date.now();
+            script1.async = true;
+            script1.setAttribute('data-cfasync', 'false');
+            
+            script1.onload = function() {
+                console.log('✅ Monetag script loaded successfully');
+                if (typeof monetag !== 'undefined') {
+                    console.log('💰 Monetag API ready for zone: 10284809');
+                }
+            };
+            
+            script1.onerror = function() {
+                console.log('⚠️ Primary script failed, using fallback');
+                // Fallback sudah ada di script pertama, jadi ini hanya untuk logging
+            };
+            
+            // Hanya tambahkan jika script pertama belum dimuat
+            setTimeout(function() {
+                if (!document.querySelector('script[src*="al5sm.com"]')) {
+                    document.head.appendChild(script1);
+                }
+            }, 1000);
+        })();
+    </script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full bg-white z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-xl"></i>
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-gray-900">
+                        News<span class="text-blue-600">Portal</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Beranda</a>
+                    <a href="#berita" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Berita</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Teknologi</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Olahraga</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Hiburan</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Beranda</a>
+                    <a href="#berita" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Berita</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Teknologi</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Olahraga</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 transition duration-200">Hiburan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
+                    Berita <span class="text-blue-600">Terkini</span> & Terpercaya
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-up">
+                    Dapatkan informasi terbaru dan akurat dari berbagai bidang: teknologi, politik, olahraga, hiburan, dan banyak lagi.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#berita" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-newspaper mr-2"></i> Baca Berita
+                    </a>
+                    <a href="#newsletter" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300 border border-blue-600">
+                        <i class="fas fa-bell mr-2"></i> Berlangganan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Berita Section -->
+        <section id="berita" class="mb-16">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Berita Terbaru</h2>
+                    <p class="text-gray-600 mt-2">Informasi terkini dari berbagai sumber terpercaya</p>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <span class="text-gray-500">Filter:</span>
+                    <select id="category-filter" class="bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="all">Semua Kategori</option>
+                        <option value="Teknologi">Teknologi</option>
+                        <option value="Olahraga">Olahraga</option>
+                        <option value="Hiburan">Hiburan</option>
+                        <option value="Ekonomi">Ekonomi</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- News Container -->
+            <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="col-span-full text-center py-12">
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div>
+                    <p class="text-gray-600">Memuat berita...</p>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more" class="px-8 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Muat Lebih Banyak
+                </button>
+            </div>
+        </section>
+
+        <!-- Advertisement Area -->
+        <div class="my-12">
+            <div class="text-center text-gray-500 text-sm mb-2">
+                <span class="bg-gray-100 px-3 py-1 rounded-full">
+                    <i class="fas fa-ad mr-1"></i> Sponsored Content
+                </span>
+            </div>
+            <div id="ad-2" class="min-h-[90px] md:min-h-[250px] bg-gray-50 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center">
+                <div class="text-center text-gray-400">
+                    <i class="fas fa-ad text-xl mb-2"></i>
+                    <p class="text-sm">Advertisement area</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="mt-20 mb-16">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Tetap Terinformasi</h2>
+                <p class="mb-6 max-w-2xl mx-auto">
+                    Dapatkan berita terkini langsung ke email Anda. Berlangganan newsletter kami dan jangan lewatkan perkembangan terbaru.
+                </p>
+                <form id="subscribe-form" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Masukkan email Anda" required class="flex-grow px-6 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition duration-300">
+                        Berlangganan
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-newspaper text-white text-xl"></i>
+                        </div>
+                        <a href="#" class="text-2xl font-bold">News<span class="text-blue-400">Portal</span></a>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Portal berita terpercaya yang menyajikan informasi terkini dan akurat dari berbagai bidang.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Tautan Cepat</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#berita" class="text-gray-400 hover:text-white transition">Berita</a></li>
+                        <li><a href="https://otieu.com/4/10285461" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Kategori</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Teknologi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Olahraga</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politik</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Hiburan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 NewsPortal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="news.js"></script>
+
+    <!-- Main JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'bg-white', 'bg-opacity-95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-opacity-95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Category filter
+        document.getElementById('category-filter').addEventListener('change', function() {
+            const category = this.value;
+            const newsCards = document.querySelectorAll('.news-card');
+            
+            newsCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.classList.remove('hidden');
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+
+        // Load more button
+        document.getElementById('load-more').addEventListener('click', function() {
+            const btn = this;
+            btn.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i> Memuat...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i> Semua Berita Dimuat';
+                btn.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                btn.classList.add('bg-green-100', 'text-green-800');
+                
+                if (typeof monetag !== 'undefined') {
+                    monetag.track('load_more_clicked');
+                }
+            }, 1500);
+        });
+
+        // Newsletter form
+        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Memproses...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i> Terdaftar!';
+                btn.classList.remove('bg-white', 'text-blue-600');
+                btn.classList.add('bg-green-500', 'text-white');
+                
+                this.reset();
+
+                if (typeof monetag !== 'undefined') {
+                    monetag.track('newsletter_signup', { email: email });
+                }
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('bg-green-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-blue-600');
+                }, 3000);
+            }, 1000);
+        });
+
+        // Window load event
+        window.addEventListener('load', function() {
+            console.log('Website loaded successfully');
+
+            // Check Monetag status
+            setTimeout(() => {
+                if (typeof monetag !== 'undefined') {
+                    console.log('✅ Monetag is active and ready');
+                    console.log('Zone:', monetag.zone || '10284809');
+                } else {
+                    console.log('⚠️ Monetag not detected, ads may not show');
+                }
+            }, 3000);
+
+            // Monitor ad containers
+            const adContainers = ['ad-1', 'ad-2'];
+            adContainers.forEach(id => {
+                const container = document.getElementById(id);
+                if (container) {
+                    const checkAd = setInterval(() => {
+                        const hasIframe = container.querySelector('iframe');
+                        const hasImg = container.querySelector('img');
+                        const hasAnchor = container.querySelector('a');
+                        
+                        if (hasIframe || hasImg || hasAnchor) {
+                            container.innerHTML = '';
+                            clearInterval(checkAd);
+                        }
+                    }, 1000);
+                    
+                    setTimeout(() => clearInterval(checkAd), 10000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
