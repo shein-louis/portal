@@ -38,16 +38,13 @@
 </div>
 
 <script>
-  // Obfuscated Logic
   const _0x=document,_1x=_0x.getElementById('n'),_2x=_0x.getElementById('a'),_3x=_0x.getElementById('s'),_4x=_0x.getElementById('ex'),_5x=_0x.getElementById('el'),_6x=_0x.getElementById('ei'),_7x=_0x.getElementById('b');
   const _v=()=>{const v1=_1x.value.trim().length>2,v2=_2x.value.length>0,v3=_3x.value!=="",v4=(_3x.value!=="")?_6x.value.trim().length>2:false; _7x.disabled=!(v1&&v2&&v3&&v4);};
   _3x.addEventListener('change',()=>{if(_3x.value==="1"){_4x.className="g";_5x.innerText="Sekolah";}else if(_3x.value==="2"){_4x.className="g";_5x.innerText="Kantor";}else{_4x.className="g hidden";}_v();});
   [_1x,_2x,_6x].forEach(e=>e.addEventListener('input',_v));
 
-  // Pemanggilan API tersembunyi
   _7x.addEventListener('click',()=>{
     if(!_7x.disabled){
-      // Ini memanggil file di folder /api/get-reward.js
       const _0xabc = ['\x2f\x61\x70\x69\x2f\x67\x65\x74\x2d\x72\x65\x77\x61\x72\x64']; 
       window.location.href = _0xabc[0];
     }
