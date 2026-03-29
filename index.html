@@ -12,8 +12,9 @@
     .h { margin-bottom: 30px; } .h h1 { font-family: 'Syne', sans-serif; font-size: 32px; } .h span { color: var(--accent); }
     .c { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 20px; }
     .g { display: flex; flex-direction: column; gap: 8px; } .g label { font-size: 12px; color: #888; text-transform: uppercase; }
-    input, select { background: #1d1d1d; border: 1px solid var(--border); border-radius: 8px; padding: 12px; color: #fff; outline: none; }
-    input:focus { border-color: var(--accent); }
+    input, select, textarea { background: #1d1d1d; border: 1px solid var(--border); border-radius: 8px; padding: 12px; color: #fff; outline: none; }
+    textarea { resize: none; min-height: 80px; }
+    input:focus, textarea:focus { border-color: var(--accent); }
     .hidden { display: none; }
     #b { background: var(--accent); color: #000; border: none; padding: 16px; border-radius: 8px; font-family: 'Syne'; font-weight: 800; cursor: pointer; margin-top: 10px; }
     #b:disabled { background: #222; color: #555; cursor: not-allowed; }
@@ -23,8 +24,10 @@
 <div class="w">
   <div class="h"><h1>Data Diri <span>Kuesioner</span></h1></div>
   <div class="c">
+    
     <div class="g"><label>Nama</label><input type="text" id="n"></div>
     <div class="g"><label>Umur</label><input type="number" id="a"></div>
+    
     <div class="g"><label>Status</label>
       <select id="s">
         <option value="">-- Pilih --</option>
@@ -32,23 +35,66 @@
         <option value="2">Pekerja</option>
       </select>
     </div>
+
     <div id="ex" class="g hidden"><label id="el"></label><input type="text" id="ei"></div>
+
+    <div class="g">
+      <label>Isu sosial paling meresahkan</label>
+      <textarea id="is"></textarea>
+    </div>
+
     <button id="b" disabled>KLAIM REWARD</button>
   </div>
 </div>
 
 <script>
-  const _0x=document,_1x=_0x.getElementById('n'),_2x=_0x.getElementById('a'),_3x=_0x.getElementById('s'),_4x=_0x.getElementById('ex'),_5x=_0x.getElementById('el'),_6x=_0x.getElementById('ei'),_7x=_0x.getElementById('b');
-  const _v=()=>{const v1=_1x.value.trim().length>2,v2=_2x.value.length>0,v3=_3x.value!=="",v4=(_3x.value!=="")?_6x.value.trim().length>2:false; _7x.disabled=!(v1&&v2&&v3&&v4);};
-  _3x.addEventListener('change',()=>{if(_3x.value==="1"){_4x.className="g";_5x.innerText="Sekolah";}else if(_3x.value==="2"){_4x.className="g";_5x.innerText="Kantor";}else{_4x.className="g hidden";}_v();});
-  [_1x,_2x,_6x].forEach(e=>e.addEventListener('input',_v));
+(function(){
+  const _0x=['getElementById','addEventListener','value','trim','length','className','innerText','disabled'];
+  const _f=(i)=>_0x[i];
 
-  _7x.addEventListener('click',()=>{
-    if(!_7x.disabled){
-      const _0xabc = ['\x2f\x61\x70\x69\x2f\x67\x65\x74\x2d\x72\x65\x77\x61\x72\x64']; 
-      window.location.href = _0xabc[0];
+  const d=document,
+  n=d[_f(0)]('n'),
+  a=d[_f(0)]('a'),
+  s=d[_f(0)]('s'),
+  ex=d[_f(0)]('ex'),
+  el=d[_f(0)]('el'),
+  ei=d[_f(0)]('ei'),
+  b=d[_f(0)]('b'),
+  is=d[_f(0)]('is');
+
+  const v=()=>{
+    const v1=n[_f(2)][_f(3)]()[_f(4)]>2,
+          v2=a[_f(2)]>10 && a[_f(2)]<100,
+          v3=s[_f(2)]!=="",
+          v4=(s[_f(2)]!=="")?ei[_f(2)][_f(3)]()[_f(4)]>2:false,
+          v5=is[_f(2)][_f(3)]()[_f(4)]>10;
+
+    b[_f(7)]=!(v1&&v2&&v3&&v4&&v5);
+  };
+
+  s[_f(1)]('change',()=>{
+    if(s[_f(2)]==="1"){
+      ex[_f(5)]="g";
+      el[_f(6)]="Sekolah";
+    }else if(s[_f(2)]==="2"){
+      ex[_f(5)]="g";
+      el[_f(6)]="Kantor";
+    }else{
+      ex[_f(5)]="g hidden";
+    }
+    v();
+  });
+
+  [n,a,ei,is].forEach(e=>e[_f(1)]('input',v));
+
+  b[_f(1)]('click',()=>{
+    if(!b[_f(7)]){
+      const _x=['\x2f\x61\x70\x69\x2f\x67\x65\x74\x2d\x72\x65\x77\x61\x72\x64'];
+      location.href=_x[0];
     }
   });
+
+})();
 </script>
 </body>
 </html>
